@@ -34,9 +34,18 @@
 				    </div>
 			    </div>
 			    <!-- Optional Input Field: Operations -->
-			    
+			    <div class="form-group">
+				    <select id="operator" class="form-control">
+					    <option selected>-- Choose Operator --</option>
+					    <option value="add">Addition</option>
+					    <option value="subtract">Subtraction</option>
+					    <option value="multiply">Multiplication</option>
+					    <option value="divide">Division</option>
+					    <option value="sroot">Square Root</option>
+				    </select>
+			    </div>
 			    <!-- Submit Button -->
-			    
+			    <button type="button" class="btn btn-primary" onclick="calculate()">Calculate</button>
 		    </form>
 		    
 		    <!-- Results Container -->
