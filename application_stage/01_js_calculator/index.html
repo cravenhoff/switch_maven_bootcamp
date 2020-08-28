@@ -72,7 +72,7 @@
 			    <!-- Submit Button -->
 			    <button type="button" class="btn btn-primary" onclick="calculate()">Calculate</button>
 			    <!-- Reset Button -->
-			    <button type="reset" class="btn btn-secondary">Reset</button>
+			    <button type="reset" class="btn btn-secondary" id="reset" onclick="resetApp()">Reset</button>
 		    </form>
 		    
 		    <!-- Results Container -->
@@ -123,5 +123,12 @@
         // Include calculate result in the Result HTML Container
         document.querySelector("#result").innerHTML = calculate;
     }
+
+     // Whole app to reset including the form input fields and the results container
+     function resetApp() {
+         // Empty string
+         let resetApp = "";
+         document.querySelector("#result").innerHTML = resetApp;
+     }
   </script>
 </html>
