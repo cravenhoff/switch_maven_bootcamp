@@ -62,4 +62,38 @@
 	    </footer>
     </div>
   </body>
+  
+  <script type="text/javascript">
+    // Calculator App Script
+    function calculate() {
+        // Store operand values in variables
+        let opA = parseInt(document.querySelector("#operand1").value);
+        let opB = parseInt(document.querySelector("#operand2").value);
+
+        // Store operator value in variable
+        let operator = document.querySelector("#operator").value;
+
+        // Variable to hold calculation result
+        let calculate;
+
+        // IF Statement to check which operator has been selected and based on that, perform the appropriate operation
+        if(operator == "add") {
+            calculate = opA + opB;
+        } else if (operator == "subtract") {
+            calculate = opA - opB;
+        } else if (operator == "multiply") {
+            calculate = opA * opB;
+        } else if (operator == "divide") {
+            calculate = opA / opB;
+        }  else if (operator == "sroot") {
+           calculate = Math.sqrt(opA);
+        }
+
+        // Test script: console out result
+        // console.log(calculate);
+
+        // Include calculate result in the Result HTML Container
+        document.querySelector("#result").innerHTML = calculate;
+    }
+  </script>
 </html>
