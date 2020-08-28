@@ -11,7 +11,14 @@
 	  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	  <!-- Twitter Bootstrap CDN -->
 	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  </head>
+	  
+	  <style type="text/css">
+		  /* General Styling */
+		  .container {
+			  margin-top: 40px;
+		  }
+	  </style>
+</head>
   
   <body>
     <div class="container">
@@ -23,18 +30,36 @@
 	    
 	    <!-- Calculator Container -->
 	    <div class="calculator">
+		    <!-- Instructions and Notes -->
+		    <p>
+			    <small class="text-muted">
+				    Instructions: This is a simple calculator app that can take two operands and calculate their result based on which operator (or type of operation) was selected. Users can select from the following five (5) operators: Addition, Subtraction, Multiplication, Division and Square Root.
+			    </small>
+		    </p>
+		    <p>
+			    <small class="text-danger">
+				    Note: To find the square root of a number, simply enter the number in the first operand input only.
+			    </small>
+		    </p><hr>
+		    
+		    <!-- Form -->
 		    <form>
 			    <!-- Input Fields: Operands -->
 			    <div class="row">
 				    <div class="col">
-					    <input type="text" class="form-control" placeholder="Operand" id="operand1">
+					    <label for="operand1">
+						    <input type="text" class="form-control" placeholder="Operand" id="operand1">
+					    </label>
 				    </div>
 				    <div class="col">
-					    <input type="text" class="form-control" placeholder="Operand" id="operand2">
+					    <label for="operand2">
+						    <input type="text" class="form-control" placeholder="Operand" id="operand2">
+					    </label>
 				    </div>
 			    </div>
 			    <!-- Optional Input Field: Operations -->
 			    <div class="form-group">
+				    Operator Type:
 				    <select id="operator" class="form-control">
 					    <option selected>-- Choose Operator --</option>
 					    <option value="add">Addition</option>
