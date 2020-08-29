@@ -30,10 +30,31 @@
 			    </p>
 		    </div>
 		    
-		    <!-- Notepad Container -->
+		    <!-- Notepad -->
 		    <div class="notepad-container">
+			    <form id="notesForm" method="POST">
+				    <div class="notes">
+					    <div class="note">
+						    <div class="mb-3">
+							    <label for="name">Screen Name:</label>
+							    <input type="text" class="form-control" placeholder="Name" id="name">
+						    </div>
+						    <div class="mb-3">
+							    <label for="notes">Notes:</label>
+							    <textarea type="text" class="form-control" placeholder="Enter notes here..." id="notes" rows="4" cols="50"></textarea>
+						    </div>
+					    </div>
+				    </div>
+				    
+				    <!-- Submit Button -->
+			    </form>
 		    </div>
 	    </div>
+
+	    <!-- Footer -->
+	    <footer class="footer">
+		    <hr><small class="text-muted">2020 Switch Maven Coding Challenge - Crystal Kewe.</small>
+	    </footer>
     </div>
   </body>
 </html>
