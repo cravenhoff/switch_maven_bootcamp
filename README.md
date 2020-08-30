@@ -1,5 +1,5 @@
 # switch_maven_coding_challenges
-Coding challenges and apps built as part of the Switch Maven Pacific Prime Program - Software Development Bootcamp here in Port Moresby, Papua New Guinea. 
+Coding challenges and apps built as part of the Switch Maven Pacifica Prime Program - a Software Development Bootcamp here in Port Moresby, Papua New Guinea that will be delivered by Switch Maven over the course of 3months starting September 01 and finishing in the first week of December 2020. 
 
 The Pacifica Prime Program is open to industry professionals and a curated list of the top computer science graduates from Papua New Guinea's Four (4) Universities. 
 
