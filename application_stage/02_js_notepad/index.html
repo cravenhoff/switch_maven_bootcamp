@@ -83,4 +83,61 @@
 	    </footer>
     </div>
   </body>
+	
+  <script type="text/javascript">
+	  /* Notepad Script */
+	  var notes = [];
+
+	  function loadNote() {
+		console.log("Button clicked..."); // Test form submission
+
+		var username = document.querySelector("#name").value
+
+		// Fetch API: GET (Retrieve) Data
+		function json(response) {
+				return response.text()
+		}
+
+		fetch("https://apply.switchmaven.com/api/retrieve?name=" + username)
+		.then(json)
+		.then(function (data) {
+			   console.log('Request response:', data);
+		})
+	  }
+
+	  document.addEventListener("DOMContentLoaded", () => {
+
+		  // Intercept the submit event on the form element
+		  document.querySelector("#notesForm").addEventListener("submit", event => {
+				
+			  // Prevent default submit behavior
+			  event.preventDefault();
+			  console.log("Form submitted...") // Test form submission
+
+			  var userNote = {
+				  name: document.querySelector("#name").value,
+				  note: document.querySelector("#notes").value
+			  }
+			  
+			  // console.log(userNote.name + " | " + userNote.note);
+
+			  // Fetch API: POST (Save) Data
+			  function json(response) {
+	
+				  return response.text()
+			  }
+			  fetch("https://apply.switchmaven.com/api/save", {
+				  method: "POST",
+				  headers: {
+					  "Accept": "application/json, text/plain, */*",
+					  "Content-type": "application/json"
+				  },
+				  body: JSON.stringify({name: userNote.name, note: userNote.note}})
+				  .then(json)
+				  .then(function (data) {
+					  console.log('Request succeeded with JSON response:', data);
+				  })
+			});
+		})
+  </script>
 </html>
