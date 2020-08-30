@@ -86,19 +86,21 @@
 	
   <script type="text/javascript">
 	  /* Notepad Script */
-	  let notes = [];
-
+	  let notes = []; // Array to hold notes
+	
+	  // Function to save notes and load the latest saved version
 	  function loadNote() {
 		console.log("Button clicked..."); // Test form submission
 
+		// Retrieves and stores the name of the user  
 		let username = document.querySelector("#name").value
 
 		// Fetch API: GET (Retrieve) Data
 		function json(response) {
 				return response.text()
 		}
-
-		fetch("https://apply.switchmaven.com/api/retrieve?name=" + username)
+		// Switch Maven API
+		fetch("https://apply.switchmaven.com/api/retrieve?name=" + username) // Retrieve saved note of specified user
 		.then(json)
 		.then(function (data) {
 			   console.log('Request response:', data);
@@ -114,6 +116,7 @@
 			  event.preventDefault();
 			  console.log("Form submitted...") // Test form submission
 
+			  // Store user's name and notes in JSON Format
 			  let userNote = {
 				  name: document.querySelector("#name").value,
 				  note: document.querySelector("#notes").value
