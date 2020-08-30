@@ -86,12 +86,12 @@
 	
   <script type="text/javascript">
 	  /* Notepad Script */
-	  var notes = [];
+	  let notes = [];
 
 	  function loadNote() {
 		console.log("Button clicked..."); // Test form submission
 
-		var username = document.querySelector("#name").value
+		let username = document.querySelector("#name").value
 
 		// Fetch API: GET (Retrieve) Data
 		function json(response) {
@@ -114,7 +114,7 @@
 			  event.preventDefault();
 			  console.log("Form submitted...") // Test form submission
 
-			  var userNote = {
+			  let userNote = {
 				  name: document.querySelector("#name").value,
 				  note: document.querySelector("#notes").value
 			  }
