@@ -1,7 +1,6 @@
 # Flexbox Basics:
 
 ### Overview:
-***
 
 * Flexbox is CSS Flexible Box Layout.
 
