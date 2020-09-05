@@ -33,3 +33,11 @@
     - center: items align at the vertical center of the container.
     - baseline: items display at the baseline of the container.
     - stretch: items are stretched to fit the container.
+
+### Notes:
+***
+* Flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based).
+
+* Highly flexible: Support large or complex applications (especially when it comes to orientation changing, resizing, stretching, shrinking, etc.).
+
+* Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts.
