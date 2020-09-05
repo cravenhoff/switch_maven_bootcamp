@@ -24,6 +24,14 @@
 
 * Flexbox is structured into two (2) components: **parent element (the flex conatiner)** and **child elements (flex items)**.
 
+* The Flex Container Properties:
+    - flex-direction
+    - flex-wrap: shorthand for both flex-direction and flex-wrap (eg: flex-flow: row wrap;)
+    - flex-flow
+    - justify-content
+    - align-items
+    - align-content
+
 * Two axes of flexbox: **Main Axis (Horizontal)** and **Cross Axis (Vertical)**.
 
 * Main Axis: Defined by "flex-direction"
