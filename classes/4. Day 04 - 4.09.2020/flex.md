@@ -6,9 +6,9 @@
 
 * Flexbox is one-dimensional because it can only layouts one dimension at a time - either as a column or as a row.
 
-* Flexbox is structured into two (2) components: parent element (the flex conatiner) and child elements (flex items).
+* Flexbox is structured into two (2) components: **parent element (the flex conatiner)** and **child elements (flex items)**.
 
-* Two axes of flexbox: Main Axis (Horizontal) and Cross Axis (Vertical)
+* Two axes of flexbox: **Main Axis (Horizontal)** and **Cross Axis (Vertical)**.
 
 * Main Axis: Defined by "flex-direction"
     - row
@@ -20,14 +20,14 @@
 
 * Justifying and Aligning Flex Container Contents using "justify-content" and "align-items".
 
-* justify-content: Aligns the contents (child-elements) in a flexbox horizontal and include the following values:
+* **justify-content**: Aligns the contents (child-elements) in a flexbox horizontal and include the following values:
     - flex-start: aligns content to the left of the container.
     - flex-end: aligns content to the right of the container.
     - center: aligns content at the center of the container.
     - space-between: items display with equal spacing between them.
     - space-around: items display with equal spacing around them.
 
-* align-items: Aligns items vertically and accepts the following values:
+* **align-items**: Aligns items vertically and accepts the following values:
     - flex-start: items align to the top of the container.
     - flex-end: items align to the bottom of the container.
     - center: items align at the vertical center of the container.
