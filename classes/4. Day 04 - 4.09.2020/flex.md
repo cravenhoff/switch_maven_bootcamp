@@ -69,6 +69,22 @@
 * Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts.
 
 
+##### Cheat Sheet: Flexbox Properties:
+
+* display: flex
+* flex-direction: row, row-reverse, column, column-reverse
+* flex-flow
+* flex-wrap: wrap, nowrap, wrap-reverse
+* justify-content: flex-start, flex-end, center, space-between, space-around
+* align-items: flex-start, flex-end, center, baseline, stretch
+* align-content: space-between, space-around, stretch, center, flex-start, flex-end
+* order: positive or negative integer values
+* flex-grow: positive or negative integer values
+* flex-shrink: positive or negative integer values
+* flex-basis: pixel value (initial length of a flex item)
+* flex: (shorthand for flex-grow, flex-shrink and flex-basis)
+* align-self: flex-start, flex-end, center, space-between, space-around (specifies the alignment for the selected item inside the flexible container)
+
 ##### References:
 
 * CSS Tricks: A Complete Guide to Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/.
