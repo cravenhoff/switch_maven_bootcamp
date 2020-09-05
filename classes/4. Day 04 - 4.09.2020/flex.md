@@ -59,3 +59,10 @@
 * Highly flexible: Support large or complex applications (especially when it comes to orientation changing, resizing, stretching, shrinking, etc.).
 
 * Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts.
+
+
+##### References:
+
+* CSS Tricks: A Complete Guide to Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/.
+* MDN: Basic Concepts of Flexbox: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox.
+* W3C Schools: CSS Flexbox: https://www.w3schools.com/css/css3_flexbox.asp.
