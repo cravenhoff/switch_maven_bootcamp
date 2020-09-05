@@ -2,9 +2,7 @@
 
 * Flexbox is CSS Flexible Box Layout.
 
-* Flexbox is a one-dimensional layout model as opposed to a two-dimensional layout model like the CSS Grid Layout.
-
-* Flexbox is one-dimensional because it can only layouts one dimension at a time - either as a column or as a row.
+* Flexbox is a one-dimensional layout model as opposed to a two-dimensional layout model like the CSS Grid Layout. Flexbox is one-dimensional because it can only layouts one dimension at a time - either as a column or as a row.
 
 * Flexbox is structured into two (2) components: **parent element (the flex conatiner)** and **child elements (flex items)**.
 
