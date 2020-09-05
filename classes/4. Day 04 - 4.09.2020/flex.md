@@ -1,8 +1,26 @@
-# Flexbox Overview:
+# Flexbox Basics:
+
+### Overview:
 
 * Flexbox is CSS Flexible Box Layout.
 
 * Flexbox is a one-dimensional layout model as opposed to a two-dimensional layout model like the CSS Grid Layout. Flexbox is one-dimensional because it can only layouts one dimension at a time - either as a column or as a row.
+
+
+### History:
+***
+
+* Before the Flexbox Layout module, there were four layout modes:
+    - Block: for sections in a webpage
+    - Inline: for text
+    - Table: for two-dimensional table data
+    - Positioned: for explicit position of an element
+
+* The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+
+
+### Key Concepts:
+***
 
 * Flexbox is structured into two (2) components: **parent element (the flex conatiner)** and **child elements (flex items)**.
 
@@ -32,10 +50,20 @@
     - baseline: items display at the baseline of the container.
     - stretch: items are stretched to fit the container.
 
+
 ### Notes:
 ***
+
 * Flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based).
 
 * Highly flexible: Support large or complex applications (especially when it comes to orientation changing, resizing, stretching, shrinking, etc.).
 
 * Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts.
+
+
+##### References:
+
+* CSS Tricks: A Complete Guide to Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/.
+* MDN: Basic Concepts of Flexbox: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox.
+* W3C Schools: CSS Flexbox: https://www.w3schools.com/css/css3_flexbox.asp.
+* Flexbox Froggy: https://flexboxfroggy.com/.
