@@ -33,3 +33,8 @@ Any of the following conversions can work:
   - Occurs in logical operations.
   - **Syntax: Boolean(value_to_convert);**
   - Boolean conversion rules: 0, undefined, null, NaN => false and anything else => true.
+
+#### Notes
+***
+
+* IMPORTANT!: null and undefined behave differently in **to string** type conversion. _Null_ becomes _0 (zero)_ and _Undefined_ becomes _NaN_.
