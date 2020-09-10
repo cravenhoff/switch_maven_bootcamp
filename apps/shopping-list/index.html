@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Shopping List App</title>
+  </head>
+  <body>
+    <main>
+      <!-- App Header Section -->
+      <header>
+        <h1>Groceries Shopping List App</h1>
+        <p>Simple web-based app built on javascript for your grocery shopping list.</p>
+      </header><hr><br>
+
+      <section id="form-fields">
+        <!-- Input group 1 -->
+        <div class="input-group">
+          <label for="item-1">Item 1:</label>
+          <input type="text" name="grocery-1" value="" id="item-1">
+        </div><br>
+
+        <!-- Input group 2 -->
+        <div class="input-group">
+          <label for="item-2">Item 2:</label>
+          <input type="text" name="grocery-2" value="" id="item-2">
+        </div><br>
+
+        <!-- Input group 3 -->
+        <div class="input-group">
+          <label for="item-3">Item 3:</label>
+          <input type="text" name="grocery-3" value="" id="item-3">
+        </div><br>
+
+        <!-- Button -->
+        <button type="button" name="button" onclick="save()">Save shopping list</button><hr>
+
+        <div id="list"></div>
+      </section>
+    </main>
+  </body>
+
+  <script>
+    function save() {
+      // Retrieve and store inputted groceries
+      let grocery1 = document.querySelector("#item-1").value;
+      let grocery2 = document.querySelector("#item-2").value;
+      let grocery3 = document.querySelector("#item-3").value;
+
+      document.querySelector("#list").innerText = `Weekly grocery shopping list: ${grocery1}, ${grocery2}, ${grocery3}`
+    }
+
+  </script>
+</html>
