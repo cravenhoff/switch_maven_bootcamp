@@ -16,25 +16,29 @@
   </body>
   
   <script>
-    // REtri
+    // Rtrieves and stores the H1 and Input HTML Tags / Elements.
     let display = document.querySelector("h1");
     let input = document.querySelector("input");
     
-    let data;
+    let data; // Declares an empty variable.
     
+    // Declares the save() function.
     let save = function() {
-      data = input.value;
+      data = input.value; // Updates the "data" variable to store the value entered in the input field.
     }
     
+    // Declares the show() function.
     let show = function() {
-      let msg;
+      let msg; // Declares an empty variable.
       
+      // Checks to see if data is defined or not.
       if(data === undefined) {
         msg = "Ooops, no stored data.";
       } else {
         msg = data;
       }
-
+      
+      // Outputs the value of "msg" to be displayed within the H1 Element.
       display.innerText = msg;
     }
   </script>
