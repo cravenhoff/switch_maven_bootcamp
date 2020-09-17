@@ -1,0 +1,42 @@
+
+<!-- LOCAL STORAGE: STATE MANAGEMENT & DATA PERSISTENCE -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>JavaScript Local Storage</title>
+    <meta charset="utf8">
+  </head>
+  
+  <body>
+    <h1>Result</h1>
+    <input />
+    <button onclick="save()">Save</button>
+    <button onclick="show()">Show</button>
+  </body>
+  
+  <script>
+    let display = document.querySelector("h1");
+    let input = document.querySelector("input");
+    
+    let save = function() {
+      let text = input.value;
+      localStorage.setItem("inputVal", text);
+    }
+    
+    let show = function() {
+      let data = localStorage.getItem("inputVal");
+      let msg;
+      
+      if(data === undefined) {
+        msg = "Oops, no stored data.";
+      } else {
+        msg = data;
+      }
+      
+      display.innerText = msg;
+    }
+  </script>
+  
+</html>
