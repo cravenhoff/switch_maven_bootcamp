@@ -1,0 +1,41 @@
+<!-- NO LOCAL STORAGE / STATE MANAGEMENT -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>JavaScript Local Storage</title>
+    <meta charset="utf8">
+  </head>
+  
+  <body>
+    <h1>Result</h1>
+    <input />
+    <button onclick="save()">Save</button>
+    <button onclick="show()">Show</button>
+  </body>
+  
+  <script>
+    // REtri
+    let display = document.querySelector("h1");
+    let input = document.querySelector("input");
+    
+    let data;
+    
+    let save = function() {
+      data = input.value;
+    }
+    
+    let show = function() {
+      let msg;
+      
+      if(data === undefined) {
+        msg = "Ooops, no stored data.";
+      } else {
+        msg = data;
+      }
+
+      display.innerText = msg;
+    }
+  </script>
+</html>
