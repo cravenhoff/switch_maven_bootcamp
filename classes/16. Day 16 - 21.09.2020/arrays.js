@@ -34,6 +34,7 @@ let orange = fruits[1];
   The method does not accept any value. Simply append it to end of the array name, right after the dot / connector.
   
   => Removing the First Element of an Array using the shift() Method / Function
+  The shift() method is similar to the pop() method in that it removes an element from an array. However, instead of removing the last element of an array, the shift() method removes the first element of an array.
   
   => Adding New Elements to an Array using the unshift() Method / Function
 
@@ -50,3 +51,9 @@ fruits.pop();
 
 // Store the removed element in a new variable
 let removedFruit = fruits.pop();
+
+// Remove the first element of the fruits[] array
+fruits.shift();
+
+// Store the removed fruit in a new variable
+let removedElement = fruits.shift();
