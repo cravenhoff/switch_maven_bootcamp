@@ -61,3 +61,15 @@ let removedElement = fruits.shift();
 
 // Add a new fruit to the beginning of the fruits[] array
 fruits.unshift("peanuts");
+
+/*
+
+  => Finding the length of an array using the .length property
+  The length of an array can be determined using the "length" property of the array construct.
+  The length property returns an integer value. The value can be stored in another variable if required.
+
+*/
+
+// Find the length of the pets[] array.
+let pets = ["charles", "max", "tiger", "fluffly"];
+pets.length; // Returns the integer 4.
