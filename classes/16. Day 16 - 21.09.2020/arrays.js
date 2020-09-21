@@ -37,6 +37,7 @@ let orange = fruits[1];
   The shift() method is similar to the pop() method in that it removes an element from an array. However, instead of removing the last element of an array, the shift() method removes the first element of an array.
   
   => Adding New Elements to an Array using the unshift() Method / Function
+  The unshift() method is similar to the push() method in that it adds a new element to an existing array. However, unlike the push() methof, unshift() adds the new element to the beginning of the array.
 
 */
 
@@ -57,3 +58,6 @@ fruits.shift();
 
 // Store the removed fruit in a new variable
 let removedElement = fruits.shift();
+
+// Add a new fruit to the beginning of the fruits[] array
+fruits.unshift("peanuts");
