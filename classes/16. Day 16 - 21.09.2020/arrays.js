@@ -107,6 +107,13 @@ pets.includes("max"); // Returns TRUE as pets[] array contains a value of "max".
   Similar to the indexOf() array method, the lastIndexOf() method can also be used to retrieve the index of array elements.
   However, the lastIndexOf() method works the opposite way to the indexOf() method, where it returns the last index where the element matched, and not the first.
   
+  => Retrieving Elements Using the slice() Method
+  Array elements can be retrieved using the slice() array method.
+  The slice() method accepts two arguments, the starting index, and the end index.
+  The slice() method retrieves and returns the elements from the indicated starting index and stops at the ending index, but does not include it.
+  The returned values or elements can be stored in a new variable. Note that the slice() method returns the selected elements as an array, and not individual string or integer values.
+  *IMPORTANT: The slice() array method DOES NOT REMOVE the elements it returns, it just "slices" or selects them.
+  
 
 */
 
@@ -117,3 +124,6 @@ pets.indexOf("tiger"); // Returns the index 2.
 pets.push("tiger"); // Pets[] === "charles", "max", "tiger", "fluffy", "tiger".
 pets.indexOf("tiger"); // Returns the index of 2.
 pets.lastIndexOf("tiger"); // Returns the index of 4.
+
+// Return elements between the second and fourth indexes from the pets[] array.
+let slicedElements = pets.slice(1, 3);
