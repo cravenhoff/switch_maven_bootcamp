@@ -67,9 +67,16 @@ fruits.unshift("peanuts");
   => Finding the length of an array using the .length property
   The length of an array can be determined using the "length" property of the array construct.
   The length property returns an integer value. The value can be stored in another variable if required.
+  
+  => Sorting Array Elements Using the sort() Method
+  Arrays or elements of an array can be sorted alphabetically using the array sort() method.
 
 */
 
 // Find the length of the pets[] array.
-let pets = ["charles", "max", "tiger", "fluffly"];
+let pets = ["charles", "max", "tiger", "fluffy"];
 pets.length; // Returns the integer 4.
+
+
+// Sort the above pets[] array.
+pets.sort(); // Returns an alphabetically sorted pets[] array => "charles", "fluffy", "max", "tiger".
