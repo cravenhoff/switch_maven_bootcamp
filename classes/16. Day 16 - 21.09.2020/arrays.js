@@ -69,3 +69,7 @@ fruits.unshift("peanuts");
   The length property returns an integer value. The value can be stored in another variable if required.
 
 */
+
+// Find the length of the pets[] array.
+let pets = ["charles", "max", "tiger", "fluffly"];
+pets.length; // Returns the integer 4.
