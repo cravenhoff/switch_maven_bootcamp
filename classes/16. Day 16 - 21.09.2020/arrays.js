@@ -95,3 +95,46 @@ pets.reverse(); // Returns the elements of the pets[] array in reversed order.
 // Check the pets[] array to see if it contains the value "striker".
 pets.includes("striker"); // Returns FALSE as pets[] array contains no such value.
 pets.includes("max"); // Returns TRUE as pets[] array contains a value of "max".
+
+/*
+
+  => Finding the Index of Array Elements Using the indexof() Method
+  Index or keys of array elements can be retrieved using the indexOf() array method.
+  The indexOf() method accepts one argument, the element or array value to retrieve the index of.
+  The indexOf() method works particularly by retrieving the very first index for which the value and element matched.
+  
+  => Find the Index of Array Elements Using the lastIndexOf() Method
+  Similar to the indexOf() array method, the lastIndexOf() method can also be used to retrieve the index of array elements.
+  However, the lastIndexOf() method works the opposite way to the indexOf() method, where it returns the last index where the element matched, and not the first.
+  
+  => Retrieving Elements Using the slice() Method
+  Array elements can be retrieved using the slice() array method.
+  The slice() method accepts two arguments, the starting index, and the end index.
+  The slice() method retrieves and returns the elements from the indicated starting index and stops at the ending index, but does not include it.
+  The returned values or elements can be stored in a new variable. Note that the slice() method returns the selected elements as an array, and not individual string or integer values.
+  *IMPORTANT: The slice() array method DOES NOT REMOVE the elements it returns, it just "slices" or selects them.
+  
+  => Retrieving and Adding/Removing Elements Using the splice() Method
+  Unlike the slice() array method, the splice() method can not only select and retrieve array elements at specifed index points, but can also add or remove selected elements within specific indexes.
+  The splice() array method accepts three arguments: starting index, how many, and elements to add all separated by comma.
+  For items removed from an array using the splice() method, the method returns the removed values. These can be stored in a separate variable.
+
+*/
+
+// Find the index of the pet "tiger" in the pets[] array.
+pets.indexOf("tiger"); // Returns the index 2.
+
+// Find the index of the last "tiger" element in the pets[] array.
+pets.push("tiger"); // Pets[] === "charles", "max", "tiger", "fluffy", "tiger".
+pets.indexOf("tiger"); // Returns the index of 2.
+pets.lastIndexOf("tiger"); // Returns the index of 4.
+
+// Return elements between the second and fourth indexes from the pets[] array.
+let slicedElements = pets.slice(1, 3);
+
+// Use the splice() array method to remove the fourth and fifth elements.
+let splicedElements = pets.splice(3, 2); // Stores the removed items: "fluffy" and "tiger", and stores them in the new variable "splicedElements" as an array.
+
+// Add new pet names to the pets[] array using the splice() method.
+pets.splice(1, 0, "striker", "marley"); // Adds "striker" to index 1 and "marley" to index 2. No elements are removed and returned.
+let removedElement = pets.splice(0, 1, "spikey"); // Removes the first element, stores it to the new variable "removedElement" and adds "spikey" to index 0.
