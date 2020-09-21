@@ -20,3 +20,19 @@ fruits[0]; // Retrieves the first element and returns its value => apple.
 
 // Saving an element to a variable
 let orange = fruits[1];
+
+/*
+
+  WORKING WITH ARRAY METHODS AND PROPERTIES:
+  
+  => Adding New Elements to an Array using the push() method / function
+  The push() method is used to add a new element to the end of an existing array.
+  The element to add to the array is enclosed within the push method's parenthesis.
+
+*/
+
+// Add a new fruit to the fruits[] array
+fruits.push("watermelon"); // Adds "watermelon" to the end of the fruits[] array.
+
+// The above can also be achieved by simply using index values
+fruits[5] = "mango"; // "mango" is now added to the fruits[] array, bringing the total number of fruits (elements) to 6.
