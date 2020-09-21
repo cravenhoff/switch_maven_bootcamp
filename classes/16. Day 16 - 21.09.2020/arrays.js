@@ -70,6 +70,9 @@ fruits.unshift("peanuts");
   
   => Sorting Array Elements Using the sort() Method
   Arrays or elements of an array can be sorted alphabetically using the array sort() method.
+  
+  => Sorting Array Elements in Reverse Order Using the reverse() Method
+  Apart from sorting array elements in alphabetical order using the sort() array method, arrays can also be sorted in reverse order using the reverse() array method.
 
 */
 
@@ -80,3 +83,6 @@ pets.length; // Returns the integer 4.
 
 // Sort the above pets[] array.
 pets.sort(); // Returns an alphabetically sorted pets[] array => "charles", "fluffy", "max", "tiger".
+
+// Sort the pets[] array in reverse order.
+pets.reverse(); // Returns the elements of the pets[] array in reversed order.
