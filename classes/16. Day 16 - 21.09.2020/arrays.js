@@ -25,9 +25,17 @@ let orange = fruits[1];
 
   WORKING WITH ARRAY METHODS AND PROPERTIES:
   
-  => Adding New Elements to an Array using the push() method / function
+  => Adding New Elements to an Array using the push() Method / Function
   The push() method is used to add a new element to the end of an existing array.
   The element to add to the array is enclosed within the push method's parenthesis.
+  
+  => Removing the Last Element of an Array using the pop() Method / Function
+  To remove the last element of an array, deploy the pop() method.
+  The method does not accept any value. Simply append it to end of the array name, right after the dot / connector.
+  
+  => Removing the First Element of an Array using the shift() Method / Function
+  
+  => Adding New Elements to an Array using the unshift() Method / Function
 
 */
 
@@ -36,3 +44,9 @@ fruits.push("watermelon"); // Adds "watermelon" to the end of the fruits[] array
 
 // The above can also be achieved by simply using index values
 fruits[5] = "mango"; // "mango" is now added to the fruits[] array, bringing the total number of fruits (elements) to 6.
+
+// Remove the last element of the fruits[] array
+fruits.pop();
+
+// Store the removed element in a new variable
+let removedFruit = fruits.pop();
