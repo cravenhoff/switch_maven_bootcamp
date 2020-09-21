@@ -102,8 +102,18 @@ pets.includes("max"); // Returns TRUE as pets[] array contains a value of "max".
   Index or keys of array elements can be retrieved using the indexOf() array method.
   The indexOf() method accepts one argument, the element or array value to retrieve the index of.
   The indexOf() method works particularly by retrieving the very first index for which the value and element matched.
+  
+  => Find the Index of Array Elements Using the lastIndexOf() Method
+  Similar to the indexOf() array method, the lastIndexOf() method can also be used to retrieve the index of array elements.
+  However, the lastIndexOf() method works the opposite way to the indexOf() method, where it returns the last index where the element matched, and not the first.
+  
 
 */
 
 // Find the index of the pet "tiger" in the pets[] array.
 pets.indexOf("tiger"); // Returns the index 2.
+
+// Find the index of the last "tiger" element in the pets[] array.
+pets.push("tiger"); // Pets[] === "charles", "max", "tiger", "fluffy", "tiger".
+pets.indexOf("tiger"); // Returns the index of 2.
+pets.lastIndexOf("tiger"); // Returns the index of 4.
