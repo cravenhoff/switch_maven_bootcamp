@@ -148,6 +148,10 @@ let removedElement = pets.splice(0, 1, "spikey"); // Removes the first element, 
   => Converting Arrays to Strings Using the join() Method
   Similar to the toString() array method, join() can also be used to convert array elements into strings.
   The advantage of using the join() array method is its ability to properly style and present the array elements in a readable string format, with appropriate spacing, custom separation symbols other than the default comma. It offers a lot more flexibility that the toString() method.
+  
+ => Combining Arrays Using the concat() Method
+ Arrays and their elements can be combined into one single array using the concat() array method.
+ This concatenation operation returns an array. The returned array can be stored in a separate variable.
 
 */
 
@@ -155,5 +159,9 @@ let removedElement = pets.splice(0, 1, "spikey"); // Removes the first element, 
 let nrlTeams = ["newcastle nights", "canteburry bulldogs", "west tigers", "south-sydney rabbitohs", "brisbane broncos"];
 let nrlTeamsString = nrlTeams.toString();
 
-// Conver the nrlTeams[] array to strings using the join() method.
+// Convert the nrlTeams[] array to strings using the join() method.
 let nrlTeamsJoin = nrlTeams.join(" - "); // Prints out the nrlTeams[] array in string format and includes proper spacing and a dash separating each element.
+
+// Create a new array and concatenate it with the nrlTeam[] array using the concat() method.
+let moreNrlTeams = ["paramatta eels", "north-queensland cowboys", "penrith panthers", "canberra raiders"];
+let combinedNrlTeams = nrlTeams.concat(moreNrlTeams); // combinedNrlTeams[] array now contains a total of 9 elements combining 5 from nrlTeams[] and 4 from nrlTeamString[].
