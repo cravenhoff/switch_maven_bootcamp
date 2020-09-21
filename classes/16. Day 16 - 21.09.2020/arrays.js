@@ -67,9 +67,31 @@ fruits.unshift("peanuts");
   => Finding the length of an array using the .length property
   The length of an array can be determined using the "length" property of the array construct.
   The length property returns an integer value. The value can be stored in another variable if required.
+  
+  => Sorting Array Elements Using the sort() Method
+  Arrays or elements of an array can be sorted alphabetically using the array sort() method.
+  
+  => Sorting Array Elements in Reverse Order Using the reverse() Method
+  Apart from sorting array elements in alphabetical order using the sort() array method, arrays can also be sorted in reverse order using the reverse() array method.
+  
+  => Checking Arrays for Specific Elements Using the includes() Method
+  Arrays can be checked to see if they contain certain elements or values. This can be done using the includes() array method.
+  The value or element to be checked is passed, in the appropriate format (string, number, boolean), to the includes() method.
+  The method returns a boolean value of true or false based on whether the value exists or not.
 
 */
 
 // Find the length of the pets[] array.
-let pets = ["charles", "max", "tiger", "fluffly"];
+let pets = ["charles", "max", "tiger", "fluffy"];
 pets.length; // Returns the integer 4.
+
+
+// Sort the above pets[] array.
+pets.sort(); // Returns an alphabetically sorted pets[] array => "charles", "fluffy", "max", "tiger".
+
+// Sort the pets[] array in reverse order.
+pets.reverse(); // Returns the elements of the pets[] array in reversed order.
+
+// Check the pets[] array to see if it contains the value "striker".
+pets.includes("striker"); // Returns FALSE as pets[] array contains no such value.
+pets.includes("max"); // Returns TRUE as pets[] array contains a value of "max".
