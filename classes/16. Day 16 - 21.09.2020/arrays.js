@@ -114,6 +114,10 @@ pets.includes("max"); // Returns TRUE as pets[] array contains a value of "max".
   The returned values or elements can be stored in a new variable. Note that the slice() method returns the selected elements as an array, and not individual string or integer values.
   *IMPORTANT: The slice() array method DOES NOT REMOVE the elements it returns, it just "slices" or selects them.
   
+  => Retrieving and Adding/Removing Elements Using the splice() Method
+  Unlike the slice() array method, the splice() method can not only select and retrieve array elements at specifed index points, but can also add or remove selected elements within specific indexes.
+  The splice() array method accepts three arguments: starting index, how many, and elements to add all separated by comma.
+  For items removed from an array using the splice() method, the method returns the removed values. These can be stored in a separate variable.
 
 */
 
@@ -127,3 +131,10 @@ pets.lastIndexOf("tiger"); // Returns the index of 4.
 
 // Return elements between the second and fourth indexes from the pets[] array.
 let slicedElements = pets.slice(1, 3);
+
+// Use the splice() array method to remove the fourth and fifth elements.
+let splicedElements = pets.splice(3, 2); // Stores the removed items: "fluffy" and "tiger", and stores them in the new variable "splicedElements" as an array.
+
+// Add new pet names to the pets[] array using the splice() method.
+pets.splice(1, 0, "striker", "marley"); // Adds "striker" to index 1 and "marley" to index 2. No elements are removed and returned.
+let removedElement = pets.splice(0, 1, "spikey"); // Removes the first element, stores it to the new variable "removedElement" and adds "spikey" to index 0.
