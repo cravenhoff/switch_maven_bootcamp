@@ -95,3 +95,15 @@ pets.reverse(); // Returns the elements of the pets[] array in reversed order.
 // Check the pets[] array to see if it contains the value "striker".
 pets.includes("striker"); // Returns FALSE as pets[] array contains no such value.
 pets.includes("max"); // Returns TRUE as pets[] array contains a value of "max".
+
+/*
+
+  => Finding the Index of Array Elements Using the indexof() Method
+  Index or keys of array elements can be retrieved using the indexOf() array method.
+  The indexOf() method accepts one argument, the element or array value to retrieve the index of.
+  The indexOf() method works particularly by retrieving the very first index for which the value and element matched.
+
+*/
+
+// Find the index of the pet "tiger" in the pets[] array.
+pets.indexOf("tiger"); // Returns the index 2.
