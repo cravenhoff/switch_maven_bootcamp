@@ -138,3 +138,15 @@ let splicedElements = pets.splice(3, 2); // Stores the removed items: "fluffy" a
 // Add new pet names to the pets[] array using the splice() method.
 pets.splice(1, 0, "striker", "marley"); // Adds "striker" to index 1 and "marley" to index 2. No elements are removed and returned.
 let removedElement = pets.splice(0, 1, "spikey"); // Removes the first element, stores it to the new variable "removedElement" and adds "spikey" to index 0.
+
+/*
+
+  => Converting Arrays to Strings Using the toString() Method
+  Array elements can easily be converted to string values using the toString() array method.
+  This method returns the array elements in a string format, with each element seperated by a comma (no spacing added).
+
+*/
+
+// Create a new array and convert its elements into a string using the toString() method.
+let nrlTeams = ["newcastle nights", "canteburry bulldogs", "west tigers", "south-sydney rabbitohs", "brisbane broncos"];
+let nrlTeamsString = nrlTeams.toString();
