@@ -1,0 +1,13 @@
+# AN OUTLINE & SUMMARY OF INTERESTING QUIRKS ABOUT JAVASCRIPT DISCOVERED DURING TRAINING
+
+### Objects: Accessing Number Type Properties
+* Properties that have a number data type can only be accessed in JavaScript using bracket notation. Using dot notation will result in an error.
+
+### Functions: Functions as Function Parameters
+* Functions can also be passed in to other functions as arguments. JavaScript will treat the function argument as any other standard argument.
+* There are two ways function parameters are handled based on how they are called. Functions passed in as arguments to another function are either:
+  1. **Invoked, or**
+  2. **Referenced**
+  
+* Invoked functions are called and executed only when the parenthesis sign in included. If the function is called without the parenthesis, it does not execute, meaning JavaScript will not run the block of code within the curly braces.
+* Referenced functions occur when the a function is called without the parenthesis. When JavaScript encounters this, it will reference, basically copy the contents of the function and pass it into the variable calling it.
