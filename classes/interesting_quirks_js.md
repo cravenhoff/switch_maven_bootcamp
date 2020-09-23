@@ -29,3 +29,4 @@
 * Method of Function Calling
   * Depending on how a function is called, JavaScript can process it in two different ways.
   * The first and common method of processing or running a function is done by simply calling the function name followed by parenthesis (). This tells JavaScript to **"execute"** or as it is technically known, **"invoke"** the function. A function is invoked when the block of code within its curly braces {} is processed / rendered.
+  * The second function is done in a similar fashion to the first method, but this time the parenthesis is disregarded. This tells JavaScript to **"copy"** the contents of the function, that is: the block of code within the functions curly braces, and returns it to the calling script. In the instance where the function call is assigned to a new variable, the contents of the function is simply returned to and stored within the new variable.
