@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Storing Objects in LocalStorage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+    	.container {
+    		margin-top: 20px;
+    		margin-bottom: 20px;
+    	}
+    	input {
+    		margin-bottom: 10px;
+    	}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<!-- Header Section -->
+		<div>
+			<h1>Personal Profile</h1>
+			<p>Please enter your personal details in the input fields provided below.</p><hr>
+		</div>
+
+		<!-- Input Section -->
+		<label for="fullName">Full Name: </label>
+		<input type="text" id="name" name="fullName" placeholder="Enter your full name" class="form-control">
+
+		<label for="nickName">Nickname: </label>
+		<input type="text" id="nickname" name="nickName" placeholder="Enter your nickname" class="form-control">
+
+		<label for="age">Age: </label>
+		<input type="text" id="age" name="age" placeholder="Enter your age" class="form-control">
+
+		<label for="origin">Nationality </label>
+		<input type="text" id="origin" name="origin" placeholder="Enter your nationality" class="form-control">
+
+		<button class="btn btn-primary" onclick="save()">Save</button>
+	</div>
+</body>
+
+<script>
+	let fullName = document.querySelector("#name");
+	let nickName = document.querySelector("#nickname");
+	let age = document.querySelector("#age");
+	let origin = document.querySelector("#origin");
+
+	let persons = [];
+
+	function save() {
+
+		persons.push(
+			{name: fullName.value, nickname: nickName.value, age: age.value, origin: origin.value}
+		);
+
+		localStorage.setItem("persons", JSON.stringify(persons));
+		// console.log(localStorage.getItem("persons"));
+	}
+</script>
+</html>
