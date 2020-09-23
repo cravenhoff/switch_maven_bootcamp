@@ -25,3 +25,7 @@
 * Composite Values on the other hand are a collection of data structures and include data types like arrays, objects and functions.
   * Contrast atomic values with composite values, the variables are **"referenced"** and **"linked"**, thereby having a default dependent state, in that what we do with one variable will have an effect on every other variable containing the reference.
   * This means that composite values are not stored and do not reference different addresses; they all refer to the same address on the computer.
+  
+* Method of Function Calling
+  * Depending on how a function is called, JavaScript can process it in two different ways.
+  * The first and common method of processing or running a function is done by simply calling the function name followed by parenthesis (). This tells JavaScript to **"execute"** or as it is technically known, **"invoke"** the function. A function is invoked when the block of code within its curly braces {} is processed / rendered.
