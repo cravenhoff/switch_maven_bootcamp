@@ -21,5 +21,5 @@
 * Atomic Values are singular, light-weight, and simple data structures/types. These include strings, numbers and booleans.
   * Atomic values when passed into a separate variable, make a copy of the value of the variable and assign it to the new variable.
   * When atomic values are copied across separate variables, each of the variables containing the copied value have a unique address in the computer, meaning they do not refer to or reference the address of the originally initialized variable. 
-  * WHAT DOES THIS MEAN THEN?--
+  * What does this mean then? Basically, it means that the variables are **"not linked"**, so what we do to one will not affect any other variable holding the **"copied"** value; it is independent of the others.
 * Composite Values on the other hand are a collection of data structures and include data types like arrays, objects and functions.
