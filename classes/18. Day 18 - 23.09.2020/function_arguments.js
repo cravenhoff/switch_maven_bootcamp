@@ -16,4 +16,29 @@ function wrapper(funcHello) {
 }
 
 // Invoke the wrapper() and hello() functions.
-wrapper(hello);
+wrapper(hello);function hello(){
+  console.log('hello')
+}
+
+function goodbye(){
+  console.log('good bye')
+}
+
+
+let x = hello()
+x; // Invokes the hello() function so x = "hello".
+
+
+function wrapper(f){
+   f() // Invokes the hello() and goodbye() functions so wrapper() outputs "hello" and "goodbye".
+}
+
+wrapper( hello )
+
+/* 
+
+    NOTES:
+    
+    When a variable containing the function value is called or "invoked" in technical terms, the function is executed. Variable functions are invoked by including the parenthesis (). Without this, the function is copied into the the calling variable and linked.
+
+*/
