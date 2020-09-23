@@ -28,8 +28,8 @@ function container(funcBye) {
   return funcBye; // No parenthesis () so goodbye() function is not invoked. Instead, the function is linked with its exact code/value copied.
 }
 
-// Invoke the container() and goodbye() functions.
-container(goodbye);
+// Invoke the container() function.
+container(goodbye); // container() function runs but does not execute the goodbye() function, instead it returns it's exact code and value.
 
 /* 
 
