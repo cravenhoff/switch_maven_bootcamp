@@ -39,3 +39,8 @@
 * NOTE: The Argument Array will store arguments regardless of whether parameters are explicity provided or not.
 
 * The Arguments Array provides an alternative method to retrieve individual arguments (Arguments elements), as well as the entire Arguments Array (containing the number of array elements as well as the list of array elements).
+
+#### Returning Functions
+* Functions, just like variable and operations, can be "returned" using the return keyword. This is achievable in situations where nested functions are utilized. Furthermore, a combination of function calls and function invocations are used to ensure such an operation works.
+
+* Examples of using the return keyword to return functions are provided in the "recursions.js" file - day 20 folder.
