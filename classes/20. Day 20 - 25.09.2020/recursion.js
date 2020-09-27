@@ -14,7 +14,11 @@
   
   => Types of Functions in JavaScript:
  JavaScript provides the following types of functions:
+ 
  1. Named Functions
+ Named functions are the most popular functions in JavaScript. Opposite to function expressions and anonymous functions, named functions are functions that are "named", or have a label that can be used to call the function.
+ 
+ There are several examples of named functions provided below. Refer to the plusOne() function for reference.
  
  2. Function Expressions
  Function expressions are simply variables that are used to assign a function to. This creates variables that "function" or operate exactly the same as any standard type of function, and is achieved by simply "invoking" the function by using the variable name along with parenthesis. 
