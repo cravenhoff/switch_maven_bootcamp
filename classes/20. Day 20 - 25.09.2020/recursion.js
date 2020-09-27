@@ -16,7 +16,12 @@
  JavaScript provides the following types of functions:
  1. Named Functions
  2. Anonymous Functions
+ 
  3. Function Expressions
+ Function expressions are simply variables that are used to assign a function to. This creates variables that "function" or operate exactly the same as any standard type of function, and is achieved by simply "invoking" the function by using the variable name along with parenthesis. 
+ 
+ There are several examples provided below of function expressions, whereby functions are created and then assigned to new variables.
+ 
  4. Arrow Functions
  5. Nested Functions
  
@@ -37,6 +42,14 @@
   => Recursions
 
 */
+
+// Create a function expression
+let add = function(num1, num2) { // The function expression is assigned to the variable "add".
+  return num1 + num2;
+}
+
+// Invoke the above function expression
+add(3, 5); // add() function returns 8, and is called just like any other standard function.
 
 // Create a simple function that uses argument objects
 let greet = function(name) {
