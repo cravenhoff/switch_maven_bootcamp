@@ -12,16 +12,15 @@
   Functions are created using the "function" keyword, accept inputs through the use of parameters, and have a return value, either explicity stated or not (in this case, the function returns a value of "undefined" by default.
   Functions are called by using their name, followed by parenthesis. This is called "invoking" a function, which instructs the JavaScript engine to "process" or "execute" the code within the functions curly braces.
   
-  => Function Expression
-  A function expression defines a named or anomymous function.
-  Eg: let greet = function(name) {
-        console.log("Hello, " + name);
-      }
-  
   => Types of Functions in JavaScript:
  JavaScript provides the following types of functions:
  1. Named Functions
  2. Anonymous Functions
+ 3. Function Expressions
+ 4. Arrow Functions
+ 5. Nested Functions
+ 
+ => The Arguments Object
   
   => Recursions
 
