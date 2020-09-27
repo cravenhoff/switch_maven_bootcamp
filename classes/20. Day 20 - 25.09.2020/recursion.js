@@ -24,6 +24,7 @@
  Arguments (values passed into functions) can be treated, by default, as objects, and are referred to as "argument objects".
  Argument objects have an array-like structure, where each argument is stored in an array called "arguments", and retrieved using indexes.
  *NOTE: Whether parameters are explicity specified are not, if an argument is passed into a function on invokation, JavaScript still registers in in the "arguments array". This means that the arguments can still be retrieved by specifying their index value.
+ An arguments object can be iterated using a for loop since the object has an array-like structure.
  
  You can specify an argument element to retrieve using its specific index, or you can retrieve the entire arguments array, by calling the array name - this will provide the list of elements within the array.
   
@@ -51,3 +52,22 @@ let funcArgs = function () {
 }
 
 funcArgs("Max", "Coltrain", 54, "Investigative Journalist"); // Returns "Arguments" Array with four elements.
+
+// Iterate through an arguments object using a for loop
+function plusOne() {
+  let counter = 0;
+
+  for (let i = 0; i < arguments.length; i++) {
+    counter += arguments[i];
+  }
+  return counter;
+} 
+
+plusOne(1, 2, 3, 4, 5);
+
+// Return the length of the arguments object (array)
+function argsLength() {
+  return arguments.length;
+}
+
+argsLength(1, 2, 3); // Returns 3, as arguments contains three elements [1, 2, 3].
