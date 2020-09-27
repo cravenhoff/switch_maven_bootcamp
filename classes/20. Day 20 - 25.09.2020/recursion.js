@@ -21,7 +21,24 @@
  5. Nested Functions
  
  => The Arguments Object
+ Arguments (values passed into functions) can be treated, by default, as objects, and are referred to as "argument objects".
+ Argument objects have an array-like structure, where each argument is stored in an array called "arguments", and retrieved using indexes.
+ *NOTE: Whether parameters are explicity specified are not, if an argument is passed into a function on invokation, JavaScript still registers in in the "arguments array". This means that the arguments can still be retrieved by specifying their index value.
   
   => Recursions
 
 */
+
+// Create a simple function that uses argument objects
+let greet = function(name) {
+  console.log("Hello, " + arguments[0]);
+}
+
+greet("Sam"); // greet() function outputs "Hello, Sam".
+
+// Use a similar function to the one above, but without the parameter
+let hello = function() {
+  console.log("Hello, " + arguments[0]);
+}
+
+hello("Max"); // hello() function outputs "Hello, Max", even without the parameter being explicity specified and provided.
