@@ -37,5 +37,6 @@ container(goodbye); // container() function runs but does not execute the goodby
     
     When a variable containing the function value is called or "invoked" in technical terms, the function is executed.
     Variable functions are invoked by including the parenthesis (). Without this, the function is copied into the the calling variable and linked.
+    In other words, the "source code" of the function is directly "copied" into the calling variable.
 
 */
