@@ -24,6 +24,8 @@
  Arguments (values passed into functions) can be treated, by default, as objects, and are referred to as "argument objects".
  Argument objects have an array-like structure, where each argument is stored in an array called "arguments", and retrieved using indexes.
  *NOTE: Whether parameters are explicity specified are not, if an argument is passed into a function on invokation, JavaScript still registers in in the "arguments array". This means that the arguments can still be retrieved by specifying their index value.
+ 
+ You can specify an argument element to retrieve using its specific index, or you can retrieve the entire arguments array, by calling the array name - this will provide the list of elements within the array.
   
   => Recursions
 
@@ -42,3 +44,10 @@ let hello = function() {
 }
 
 hello("Max"); // hello() function outputs "Hello, Max", even without the parameter being explicity specified and provided.
+
+// Create a function, pass in three different arguments, and retrieve the list of arguments stored in the default "arguments array"
+let funcArgs = function () {
+  console.log(arguments);
+}
+
+funcArgs("Max", "Coltrain", 54, "Investigative Journalist"); // Returns "Arguments" Array with four elements.
