@@ -1,4 +1,4 @@
-/* WORKING WITH RECURSIONS IN JAVASCRIPT */
+/* WORKING WITH FUNCTIONS IN JAVASCRIPT */
 
 /*
 
@@ -51,8 +51,6 @@
  Functions can return variables, evaluations of operations, and even other functions.
  In cases where functions return other functions, this is mostly used when nested functions are in usage.
  The return values of functions can be assigned to variables for storage.
-  
-  => Recursions
 
 */
 
