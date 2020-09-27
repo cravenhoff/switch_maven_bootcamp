@@ -9,7 +9,7 @@
   
   => Functions
   Functions in JavaScript are essentially "sub-programs" that group relatable code together and provide a clean, repeatable method for executing a single feature or operation in an application. In short, a JavaScript function is a block of code designed to perform a particular task.
-  Functions are created using the "function" keyword, accept inputs through the use of parameters, and have a return value, either explicity stated or not (in this case, the function returns a value of "undefined" by default.
+  Functions are created using the "function" keyword, accept inputs through the use of parameters, and have a return value, either explicity stated or not (in this case, the function returns a value of "undefined" by default).
   Functions are called by using their name, followed by parenthesis. This is called "invoking" a function, which instructs the JavaScript engine to "process" or "execute" the code within the functions curly braces.
   
   => Types of Functions in JavaScript:
@@ -27,6 +27,12 @@
  An arguments object can be iterated using a for loop since the object has an array-like structure.
  
  You can specify an argument element to retrieve using its specific index, or you can retrieve the entire arguments array, by calling the array name - this will provide the list of elements within the array.
+ 
+ => Function: Return Value
+ All functions return a value, whether the "return" keyword is explicity stated or not (in this case, the function returns a value of "undefined" by default).
+ Functions can return variables, evaluations of operations, and even other functions.
+ In cases where functions return other functions, this is mostly used when nested functions are in usage.
+ The return values of functions can be assigned to variables for storage.
   
   => Recursions
 
@@ -71,3 +77,16 @@ function argsLength() {
 }
 
 argsLength(1, 2, 3); // Returns 3, as arguments contains three elements [1, 2, 3].
+
+// Created a nested function and return the inner (nested) function as the return value of the outer (parent) function
+function multiple(x) {
+  let innerFunc = function (y) {
+    return x * y;
+  }
+  
+  return innerFunc;
+} 
+
+let triple = multiple(3); // triple === innerFunc(y) {return 3 * y;} or innerFunc(y) {return x * y;}
+triple(5); // triple is invoked, thereby causing inner() to run. triple is now === innerFunc(5) {return 3 * 5;}. Hence, triple === 15.
+triple;
