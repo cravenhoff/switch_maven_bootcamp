@@ -125,3 +125,14 @@ let person2 = {
 
 personUpdate.fullName.call(person2, "California", "USA"); // Passes in the person2{} object, which is where the firstName and lastName is referenced and retrieved. The arguments "California" and "USA" are passed into the object function, personUpdate.fullName(city, country).
 personUpdate.fullName.call(person1, "Port Moresby", "Papua New Guinea");
+
+// Another example: this keyword in functions
+let personObj = {
+  name: "Scotty"
+}
+
+let hello = function() {
+  console.log(`Hello, ${this.name}`);
+}
+
+hello.call(personObj);
