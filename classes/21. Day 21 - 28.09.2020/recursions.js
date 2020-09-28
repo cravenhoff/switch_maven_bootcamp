@@ -37,10 +37,60 @@ let countdown = (counter) => {
   // Declare base camp
   if (counter === 0) {
     return "End of recursion...";
+  } else {
+    console.log(counter);
+    return countdown(counter - 1);
   }
-  
-  console.log(counter);
-  return countdown(counter - 1);
 }
 
 console.log(countdown(5));
+
+// Another recursion example: Even or Odd Number
+let evenOrOdd = number => {
+  if (number === 0) {
+    return "Even";
+  } else if (number === 1) {
+    return "Odd";          
+  } else {
+    return evenOrOdd(number - 2);
+  }
+}
+
+console.log(evenOrOdd(5)); // Returns "Odd"
+console.log(evenOrOdd(12)); // Returns "Event"
+
+// Another Recursion Example: Counting Up to 100 in Fives
+let countToHundredInFives = num => {
+  // Define base camp
+  if (num > 100) {
+    return "Congratulations! You have reached 100.";
+  } else {
+    console.log(num);
+    return countToHundredInFives(num + 5);
+  }
+}
+
+console.log(countToHundredInFives(0));
+
+// More recursion examples: String character patterns with for loops and recursions
+// Printing out a hash pyramid using a for loop
+let hash = "#";
+for (let i = 0; i < 5; i++) {
+  console.log(hash);
+  hash += "#";
+}
+
+// Printing out a hash pyramid using a recursion
+let hash = "";
+let patterns = lines => {
+  // Define base camp
+  if (lines === 0) {
+    return lines;
+  } else {
+    hash += "#";
+    console.log(hash);
+    return patterns(lines - 1);
+  }
+}
+
+console.log(patterns(5)); // Outputs the string of hash patterns in a pyramid scheme, similar to what the for loop did.
