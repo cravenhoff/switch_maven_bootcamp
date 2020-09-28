@@ -28,11 +28,13 @@
   => Recursions vs. Loops
   Why would you want to use recursions over loops?
   
-  2. Loops
+  1. Loops
   Loops run faster than recursive functions, and when it comes to readability, it's much easier to look at a loop and understand what's happening. Furthermore, loops are easier to write/code than recursive functions, and often times require less code and lines.
   
-  1. Recursions
+  2. Recursions
   Recursions on the other hand are very elegant. Recursions emphasize and allow efficiency. However, a good rule of thumb when it comes to designing and build programs is to focus on writing code that is "correct" and "easy to understand". Efficiency, speed and app performance can be measured afterwards and improved if necessary.
+  
+  *NOTE: The important advantage recursion provides over loops, is that it can only be used to solve certain problems in a program that loops cannot otherwise do. More on this will be provided below in subsequent examples.
 
 */
 
