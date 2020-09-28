@@ -24,6 +24,15 @@
   
   4. Function call: Starting point - intial counter value
   Finally, the recursion is called "outside" the function and passes in the initial or starting value of the counter as the function argument.
+  
+  => Recursions vs. Loops
+  Why would you want to use recursions over loops?
+  
+  2. Loops
+  Loops run faster than recursive functions, and when it comes to readability, it's much easier to look at a loop and understand what's happening. Furthermore, loops are easier to write/code than recursive functions, and often times require less code and lines.
+  
+  1. Recursions
+  Recursions on the other hand are very elegant. Recursions emphasize and allow efficiency. However, a good rule of thumb when it comes to designing and build programs is to focus on writing code that is "correct" and "easy to understand". Efficiency, speed and app performance can be measured afterwards and improved if necessary.
 
 */
 
