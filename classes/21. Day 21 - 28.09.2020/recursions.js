@@ -18,6 +18,9 @@
   The base camp is provided using an IF Statement. that instructs the recursion when to stop running itself. This is done when the condition in the IF Statemtent is met and returns true. As long as the if statement is false, the consecutive lines of code within the function runs.
   
   3. Function is called within itself
+  The countdown() recursion example ends by calling itself and ensures to include the following:
+    a. A decrement (or increment), or what is referred to as the "final expression" in a for loop. This is the counter that keeps count of the recursion variable.
+    b. Return keyword where by the current value of the counter is returned to the console and printed out.
   
   4. Function call: Starting point - intial counter value
 
