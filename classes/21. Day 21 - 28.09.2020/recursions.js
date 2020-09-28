@@ -71,3 +71,26 @@ let countToHundredInFives = num => {
 }
 
 console.log(countToHundredInFives(0));
+
+// More recursion examples: String character patterns with for loops and recursions
+// Printing out a hash pyramid using a for loop
+let hash = "#";
+for (let i = 0; i < 5; i++) {
+  console.log(hash);
+  hash += "#";
+}
+
+// Printing out a hash pyramid using a recursion
+let hash = "";
+let patterns = lines => {
+  // Define base camp
+  if (lines === 0) {
+    return lines;
+  } else {
+    hash += "#";
+    console.log(hash);
+    return patterns(lines - 1);
+  }
+}
+
+console.log(patterns(5)); // Outputs the string of hash patterns in a pyramid scheme, similar to what the for loop did.
