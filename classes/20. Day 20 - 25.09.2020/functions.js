@@ -119,3 +119,24 @@ function multiple(x) {
 let triple = multiple(3); // triple === innerFunc(y) {return 3 * y;} or innerFunc(y) {return x * y;}
 triple(5); // triple is invoked, thereby causing inner() to run. triple is now === innerFunc(5) {return 3 * 5;}. Hence, triple === 15.
 triple;
+
+// Create a simple function expression to convert to the shorthand arrow notation/expression form
+let sayName = function(name) {
+    console.log(name);
+}
+
+sayName("John"); // Prints out "John"
+
+// Sse the shorthand, arrow notation and convert the above sayName() function to an arrow function
+let sayName = (name) => {
+    console.log(name);
+}
+
+sayName("Kyle"); // Prints out "Kyle"
+
+// Since sayName() only accepts on argument, we can omit the parenthesis, like so
+let sayName = name => {
+    console.log(name);
+}
+
+sayName("Kyle"); // Still valid. Prints out "Kyle"
