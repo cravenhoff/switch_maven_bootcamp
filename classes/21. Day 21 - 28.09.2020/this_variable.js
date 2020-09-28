@@ -1,5 +1,14 @@
 /* WORKING WITH THE "THIS" VARIABLE KEYWORD IN JAVASCRIPT */
 
+/*
+
+  => this Keyword / Variable
+  Used to reference objects in a way that does not hard-code the objects the "this" keyword should reference and look up. Furthermore, it allows for one function to be created and used as many times as required by different objects throughout the life of the program.
+  
+  When the "this" keyword is used within a function, the object does not need to be passed into the function for it to be accessible to the "this" variable. JavaScript automatically takes care of that. However, this can only be done when the function referencing the object using "this" is linked as a property of the (soon to be referenced) object.
+
+*/
+
 // Example code of the "this" keyword
 function increase() {
   return this.count += 1;
