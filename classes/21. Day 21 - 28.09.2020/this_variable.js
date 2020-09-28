@@ -64,7 +64,8 @@ var person = {
   firstName:"John",
   lastName: "Doe",
   fullName: function () {
-    return this.firstName + " " + this.lastName;
+    return this.firstName + " " + this.lastName; // "this" refers to the "owner of the function", which is the object person{}.
+    // In other words, if we did not use "this", we would instead have hard-coded the object, replacing "this" with "person".
   }
 }
 
