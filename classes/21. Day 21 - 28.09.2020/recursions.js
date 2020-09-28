@@ -58,3 +58,16 @@ let evenOrOdd = number => {
 
 console.log(evenOrOdd(5)); // Returns "Odd"
 console.log(evenOrOdd(12)); // Returns "Event"
+
+// Another Recursion Example: Counting Up to 100 in Fives
+let countToHundredInFives = num => {
+  // Define base camp
+  if (num > 100) {
+    return "Congratulations! You have reached 100.";
+  } else {
+    console.log(num);
+    return countToHundredInFives(num + 5);
+  }
+}
+
+console.log(countToHundredInFives(0));
