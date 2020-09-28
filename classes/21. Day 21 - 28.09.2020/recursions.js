@@ -44,3 +44,17 @@ let countdown = (counter) => {
 }
 
 console.log(countdown(5));
+
+// Another recursion example: Even or Odd Number
+let evenOrOdd = number => {
+  if (number === 0) {
+    return "Even";
+  } else if (number === 1) {
+    return "Odd";          
+  } else {
+    return evenOrOdd(number - 2);
+  }
+}
+
+console.log(evenOrOdd(5)); // Returns "Odd"
+console.log(evenOrOdd(12)); // Returns "Event"
