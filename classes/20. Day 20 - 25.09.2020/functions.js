@@ -30,13 +30,18 @@
  3. Anonymous Functions
  Anonymous functions are functions created without a name or label assigned to them. In order to work with anonymous functions, the functions are generally created and assigned to variables in what are called "function expressions". This is achieved by creating a standard variable and assigning its value the function code, without any name. The function code to the right of the assignment operator includes just the "function" keyword, parenthesis, and the curly braces containing the block of code to run when the function is invoked (called using the variable name it's been assigned to and parenthesis).
  
- 4. Arrow Functions
- 
- 5. Nested Functions
+ 4. Nested Functions
  In JavaScript, a function can have one or more inner functions. This is acheived through "nesting" functions within other functions.
  All nested functions are within scope of the outer function, however anything within the nested functions are out of scope from the outer function.
  
  For a sample of a nested function, refer to the multiple() function provided below.
+ 
+ 5. Arrow Functions
+ Arrow functions are a shorthand function expression, and were introduced in ES6.
+ 
+ Functions written in this shorthand form do not use the "function" keyword, and the functions created are done so as "function expressions" (function code is assigned to a variable). Furthermore, function parameters are declared within parenthesis for functions that accept multiple arguments. In the instance that the function only accepts one argument, the parenthesis can be excluded.
+ 
+The final syntax of an arrow function includes an arrow, composed using the assignment operator and the greater than sign. This is provided after the function parameters and precedes the function's curly braces.
  
  => The Arguments Object
  Arguments (values passed into functions) can be treated, by default, as objects, and are referred to as "argument objects".
