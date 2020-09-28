@@ -18,6 +18,11 @@
   The call() method is appended to the object function (generally using dot notation), and within its parenthesis, passes in the object to reference. This results in the object function using the "this" keyword to reference the object passed into the function using the call() method, and not the owner of the function calling it.
   
   Example: Refer to an updated person{} object for.
+  
+  => call() Method: Arguments
+  Just like any other method and function, the call() method accepts arguments, other than the object argument. Arguments apart from the object argument are specifically for the calling object function's parameters.
+  
+  Example: Refer to the personDetails{} object.
 
 */
 
@@ -100,3 +105,23 @@ person.fullName.call(personOne); // Returns "John Doe"
 // After personOne{} is passed into the fullName() function, "this" no longer references its parent owner "newPerson{}"; it instead references the new parent owner "personOne{}".
 person.fullName.call(personTwo); // Returns "Mary Anne"
 // Likewise, after personTwo{} is passed into the fullName() function, "this" no longer references its parent owner "newPerson{}"; it now references the new parent owner "personTwo{}".
+
+// person details object - passing arguments into the call() method
+let personUpdate = {
+  fullName: function(city, country) {
+    return `${this.firstName} ${this.lastName}, ${city}, ${country}`;
+  }
+}
+
+let person1 = {
+  firstName: "Joe",
+  lastName: "Piper"
+}
+
+let person2 = {
+  firstName: "Stan",
+  lastName: "Ford"
+}
+
+personUpdate.fullName.call(person2, "California", "USA"); // Passes in the person2{} object, which is where the firstName and lastName is referenced and retrieved. The arguments "California" and "USA" are passed into the object function, personUpdate.fullName(city, country).
+personUpdate.fullName.call(person1, "Port Moresby", "Papua New Guinea");
