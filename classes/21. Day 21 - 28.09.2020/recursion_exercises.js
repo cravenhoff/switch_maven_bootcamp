@@ -30,7 +30,7 @@ let reverseString = str => {
 
 	reversedStr = reversedChar.toString();
 
-	finalStr = reversedStr.replace("/,/g", "");
+	finalStr = reversedStr.replace(/,/g, "");
 
 	console.log(finalStr);
     return reverseString(newStr);
