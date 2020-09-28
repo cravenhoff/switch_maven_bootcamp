@@ -6,6 +6,14 @@
   Recursions are functions that repeat themselves, similar to a loop, until a speciifed condition has been met. This "specifed condition" must be provided to the recursive function, and is technically called the "base camp". This is declared as the first statement in any recursive function.
   
   An example of a recursion is provided below where a standard loop that counts down from a certain value is replaced with a recursion that performs the same operation.
+  
+  => Key Concepts in Recursions
+  Recursions deal with a lot of similar foundational concepts and components of JavaScript.
+  
+  Breaking the example recursion provided below, the following key parts are noted:
+  1. Arrow function
+  2. If statement - base camp
+  3. Function is called within itself
 
 */
 
