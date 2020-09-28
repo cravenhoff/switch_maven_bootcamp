@@ -21,7 +21,6 @@ let reverseString = str => {
     
     
 	let strChar = str[stringLength - 1]
-	console.log(strChar);
 
 	let newStr = "";
 	newStr += str.slice(counter, stringLength - 1);
