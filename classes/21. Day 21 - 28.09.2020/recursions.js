@@ -11,9 +11,15 @@
   Recursions deal with a lot of similar foundational concepts and components of JavaScript.
   
   Breaking the example recursion provided below, the following key parts are noted:
-  1. Arrow function
+  1. Arrow function and function expression
+  The recursion example below is created using a function expression and arrow function syntax.
+  
   2. If statement - base camp
+  The base camp is provided using an IF Statement. that instructs the recursion when to stop running itself. This is done when the condition in the IF Statemtent is met and returns true. As long as the if statement is false, the consecutive lines of code within the function runs.
+  
   3. Function is called within itself
+  
+  4. Function call: Starting point - intial counter value
 
 */
 
