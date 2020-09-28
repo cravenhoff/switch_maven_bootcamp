@@ -11,6 +11,13 @@
   Functions declared as values of properties can reference their parent object using the "this" keyword. In such instances, the parent object is the "owner" of the function property, and therefore whenever the function uses the "this" keyword, it is referencing its parent object.
   
   Example: Refer to the person{} object below.
+  
+  => call() Object Method
+  The call() method is a prefedined JavaScript method / function. This method is used to fire up object functions and can pass new, and separate objects into the calling object function.
+  
+  The call() method is appended to the object function (generally using dot notation), and within its parenthesis, passes in the object to reference. This results in the object function using the "this" keyword to reference the object passed into the function using the call() method, and not the owner of the function calling it.
+  
+  Example: Refer to an updated person{} object for.
 
 */
 
@@ -60,7 +67,7 @@ objOne.count; // Returns 1
 objTwo.count; // Returns 0.
 
 // person object
-var person = {
+let person = {
   firstName:"John",
   lastName: "Doe",
   fullName: function () {
@@ -70,3 +77,26 @@ var person = {
 }
 
 person.fullName(); // Returns "John Doe"
+
+// Updated person object
+let newPerson = {
+  fullName: function () {
+    return this.firstName + " " + this.lastName; // At this stage, "this" references the functions owner newPerson{} object.
+  }
+}
+
+let personOne = {
+  firstName:"John",
+  lastName: "Doe"
+}
+
+let personTwo = {
+  firstName:"Marry",
+  lastName: "Anne"
+}
+
+// We can now retrieve the first and last name of either personOne or personTwo objects by simply using the call() method.
+person.fullName.call(personOne); // Returns "John Doe"
+// After personOne{} is passed into the fullName() function, "this" no longer references its parent owner "newPerson{}"; it instead references the new parent owner "personOne{}".
+person.fullName.call(personTwo); // Returns "Mary Anne"
+// Likewise, after personTwo{} is passed into the fullName() function, "this" no longer references its parent owner "newPerson{}"; it now references the new parent owner "personTwo{}".
