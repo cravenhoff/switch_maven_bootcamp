@@ -26,4 +26,21 @@ function inc(objData) {
 
 inc(newObj); // Passes in the newObj{} object
 
+// Another example of functions without the "this" keyword
+// Object One
+let objOne = {
+  count: 0
+}
 
+// Object Two
+let objTwo = {
+  count: 0
+}
+
+function countObjs(that) {
+  return that.count += 1;
+}
+
+countObjs(objOne); // ObjOne.count === 1
+objOne.count; // Returns 1
+objTwo.count; // Returns 0.
