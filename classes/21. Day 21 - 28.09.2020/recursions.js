@@ -23,6 +23,7 @@
     b. Return keyword where by the current value of the counter is returned to the console and printed out.
   
   4. Function call: Starting point - intial counter value
+  Finally, the recursion is called "outside" the function and passes in the initial or starting value of the counter as the function argument.
 
 */
 
