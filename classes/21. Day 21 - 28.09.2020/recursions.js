@@ -37,10 +37,10 @@ let countdown = (counter) => {
   // Declare base camp
   if (counter === 0) {
     return "End of recursion...";
+  } else {
+    console.log(counter);
+    return countdown(counter - 1);
   }
-  
-  console.log(counter);
-  return countdown(counter - 1);
 }
 
 console.log(countdown(5));
