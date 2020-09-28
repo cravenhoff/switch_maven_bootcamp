@@ -17,24 +17,23 @@ let reverseString = str => {
 	// Define base camp
 	if (stringLength === 0) {
 		return "You've run out of characters!";
-	} else {
-		let strChar = str[stringLength - 1]
-		console.log(strChar);
-
-		let newStr = "";
-		newStr += str.slice(counter, stringLength - 1);
-
-		reversedChar.push(strChar);
-
-		reversedStr = reversedChar.toString();
-
-		finalStr = reversedStr.replace(",", "");
-
-		return reverseString(newStr);
 	}
+    
+    
+	let strChar = str[stringLength - 1]
+	console.log(strChar);
 
-	counter += 1;
+	let newStr = "";
+	newStr += str.slice(counter, stringLength - 1);
+
+	reversedChar.push(strChar);
+
+	reversedStr = reversedChar.toString();
+
+	finalStr = reversedStr.replace("/,/g", "");
+
 	console.log(finalStr);
+    return reverseString(newStr);
 }
 
 console.log(reverseString("freeCodeCamp"));
