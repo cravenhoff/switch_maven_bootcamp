@@ -34,3 +34,16 @@ let crystalClone2 = new crystalClone("Craven", 12, "Teleportation");
 let crystalClone3 = new crystalClone("Lenora", 33, "Photographic Memory");
 
 // Create a function and instantiate an object using the call() method technique.
+let fruit = function(name, color) {
+  this.name = name;
+  this.color = color;
+  
+  return this;
+}
+
+// Use call() method to instantiate fruit object
+let apple = {};
+fruit.call(apple, "apple", "red");
+
+// You could the the above as follows:
+// let apple = fruit.call(apple, "apple", "red"); // Achieves the same thing.
