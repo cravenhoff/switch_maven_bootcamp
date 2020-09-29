@@ -21,19 +21,19 @@
 
 */
 
-// Create a "clone" constructor function that instantiates new object clones of yourself.
-let crystalClone = function (name, age, superPower) {
+/* Create a "clone" constructor function that instantiates new object clones of yourself. */
+let CystalClone = function(name, age, superPower) {
   this.name = name;
   this.age = age;
   this.superPower = superPower;
 }
 
 // Instantiate a clone of Crystal
-let crystalClone1 = new crystalClone("Crystal", 22, "Time Travel");
-let crystalClone2 = new crystalClone("Craven", 12, "Teleportation");
-let crystalClone3 = new crystalClone("Lenora", 33, "Photographic Memory");
+let CrystalClone1 = new crystalClone("Crystal", 22, "Time Travel");
+let CrystalClone2 = new crystalClone("Craven", 12, "Teleportation");
+let CrystalClone3 = new crystalClone("Lenora", 33, "Photographic Memory");
 
-// Create a function and instantiate an object using the call() method technique.
+/* Create a function and instantiate an object using the call() method technique. */
 let fruit = function(name, color) {
   this.name = name;
   this.color = color;
@@ -47,3 +47,20 @@ fruit.call(apple, "apple", "red");
 
 // You could the the above as follows:
 // let apple = fruit.call(apple, "apple", "red"); // Achieves the same thing.
+
+/* Instantiating nested objects */
+let Address = function(name, number) {
+  this.streetName = name;
+  this.streetNumber = number;
+}
+
+let Person = function(name, age, streetName, streetNumber) {
+  this.name = name;
+  this.age = age;
+  
+  // Instantiate the address from the Address() Constructor
+  this.address = new Address(streetName, streetNumber);
+  
+}
+
+let personOne = new Person("Sam", 24, 333, "Tesla St.");
