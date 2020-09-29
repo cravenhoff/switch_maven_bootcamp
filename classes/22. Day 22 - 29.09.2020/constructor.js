@@ -17,12 +17,14 @@
   The call() method is appended to the function that needs to reference a particular object.
   Eg: functionNation.call(object, argument1, argument2, ....);
   
-  3. Referencing the Global Window Object
+  => Referencing the Global Window Object
+  When no immediate object is provided, the function using the "this" keyword will reference the global "window object".
+  Refer to the example provided below.
 
 */
 
 /* Create a "clone" constructor function that instantiates new object clones of yourself. */
-let CystalClone = function(name, age, superPower) {
+let CrystalClone = function(name, age, superPower) {
   this.name = name;
   this.age = age;
   this.superPower = superPower;
@@ -64,3 +66,17 @@ let Person = function(name, age, streetName, streetNumber) {
 }
 
 let personOne = new Person("Sam", 24, 333, "Tesla St.");
+
+/* Referencing the global window object */
+let human = function(name, age) {
+  this.name = name;
+  this.age = age;
+  
+  return this;
+} 
+
+console.log(human("Max", 30)); // Returns the entire window object with "name" and "age" added as its new properties.
+let humanName = window.name;
+let humanAge = window.age;
+console.log(humanName); // Prints out the value "Max".
+console.log(age); // Prints out the value 30.
