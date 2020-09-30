@@ -8,3 +8,15 @@
   Syntax: webpageComponent.addEventListener(eventTypeToListenOutFor, functionToRunWhenEventIsTrigger)
 
 */
+
+// Create a button in the browser as the webpage component to tie the event listener to.
+// <button onclick="hello()"></button>
+
+// Create the script - the function to run when the event is triggered through an event listener.
+function hello() {
+  console.log("Greetings");
+}
+
+// Add event listener
+let btn = document.querySelector("button");
+btn.addEventListener("click", hello);
