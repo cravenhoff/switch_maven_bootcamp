@@ -9,7 +9,7 @@
 
 */
 
-// Create a button in the browser as the webpage component to tie the event listener to.
+/* Create a button in the browser as the webpage component to tie the event listener to. */
 // <button onclick="hello()"></button>
 
 // Create the script - the function to run when the event is triggered through an event listener.
