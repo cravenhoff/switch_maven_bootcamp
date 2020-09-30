@@ -1,0 +1,93 @@
+<!-- RECREATING THE CALCULATOR APP USING EVENT LISTENERS -->
+
+<!-- Activity: Recreate the original calculator app to use event listeners. -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Calculator with Event Listeners</title>
+  </head>
+  <body>
+    <h1 id="firstNum">10</h1>
+    <h1 id="secondNum">2</h1>
+    <h2 id="result">temp</h2>
+
+
+    <button id="add">Add</button>
+    <button id="subtract">Subtract</button>
+    <button id="multiply">Multiply</button>
+    <button id="divide">Divide</button>
+    <button id="sqroot">Square Root</button>
+  </body>
+
+  <script>
+
+  let firstOperand = document.querySelector("#firstNum").innerText;
+  let secondOperand = document.querySelector("#secondNum").innerText;
+
+  // Create function to convert value to number
+  function convertToNum(toConvert) {
+     let conversion = Number(toConvert); // Stores converted value to new variable
+     return conversion; // Returns the variable value.
+  }
+
+  function add() {
+      // Call the convertToNum function and pass in the value of the #firstNum
+      firstOperand = convertToNum(firstOperand); 
+
+      // Call the convertToNum function and pass in the value of the #secondNum
+      secondOperand = convertToNum(secondOperand);
+
+      let result = firstOperand + secondOperand;
+      document.querySelector("#result").innerText = result;
+  }
+
+  /* -- Additional arithmetic operations -- */
+  // subtraction() function
+  function subtract() {
+      let result = firstOperand - secondOperand;
+      document.querySelector("#result").innerText = result;
+  }
+
+  // multiplication() function
+  function multiply() {
+      let result = firstOperand * secondOperand;
+      document.querySelector("#result").innerText = result;
+  }
+
+  // division() function
+  function divide() {
+      let result = firstOperand / secondOperand;
+      document.querySelector("#result").innerText = result;
+  }
+
+  // square root() function
+  function sqroot() {
+      let operand = prompt("Type in the number you want to find the square root of.");
+      let result = Math.sqrt(operand);
+      document.querySelector("#result").innerText = result;
+  }
+
+  /* Event Listeners */
+  // Addition Event Listener
+  let addBtn = document.querySelector("#add");
+  addBtn.addEventListener("click", add);
+
+  // Subtraction Event Listener
+  let subtractBtn = document.querySelector("#subtract");
+  subtractBtn.addEventListener("click", subtract);
+
+  // Multiplication Event Listener
+  let multiplyBtn = document.querySelector("#multiply");
+  multiplyBtn.addEventListener("click", multiply);
+
+  // Division Event Listener
+  let divideBtn = document.querySelector("#divide");
+  divideBtn.addEventListener("click", divide);
+
+  // Square Root Event Listener
+  let sqrootBtn = document.querySelector("#sqroot");
+  sqrootBtn.addEventListener("click", sqroot);
+
+  </script>
+</html>
