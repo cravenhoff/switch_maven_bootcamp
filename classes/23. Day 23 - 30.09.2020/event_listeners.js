@@ -18,5 +18,5 @@ function hello() {
 }
 
 // Add event listener
-let btn = document.querySelector("button");
-btn.addEventListener("click", hello);
+let btn = document.querySelector("button"); // Selected the button of the webpage
+btn.addEventListener("click", hello); // Added a "click" event listener to the button, which will run the hello() function when the button is click (when the event is triggered)
