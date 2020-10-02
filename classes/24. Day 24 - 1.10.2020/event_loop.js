@@ -28,5 +28,8 @@
    The stack is created every time a function call is made, in the case of event loops, every time an event is triggered and runs. The stack typically holds the function, its return value as well as any function-specific and/or global variables.
    
    Basic idea: A function call or execution creates a new stack, and when a function ends with a return value, the stack is destroyed.
+   
+   *NOTE: The stack is managed by the JavaScript Engine. Different browsers implement specific implementations of the JavaScript Engine.
+   For example: Chrome uses the V8 Engine and Mozilla uses SpiderMonkey.
 
 */
