@@ -37,7 +37,7 @@
   *NOTE: The important advantage recursion provides over loops, is that it can only be used to solve certain problems in a program that loops cannot otherwise do. More on this will be provided below in subsequent examples.
   
   => TECHNICAL IMPLEMENTATION: RECURSIONS VS. LOOPS
-  A key technical implementation of recursions over loops is the way these two constructs are handled by the JavaScript Engine. Recursions are essentially functions, but they are a special type of function. Unlike traditional functions, recursions or "recursive functions" call themselves in a sort of loop structure for a specified period of runs or iterations until a specific condition, called the "base case" is met and returns a value of true. It is this that tends to cause confusion with beginner programmers on why recursions should be used over loops.
+  A key technical implementation of recursions over loops is the way these two constructs are handled by the JavaScript Engine. Recursions are essentially functions, but they are a special type of function. Unlike traditional functions, recursions or "recursive functions" call themselves in a sort of loop structure for a specified period of runs or iterations until a specific condition, called the "base case" is met and returns a value of true. It is this that tends to cause confusion with beginner programmers on why recursions should be used over loops, when they essentially help to achieve the same thing.
   
   When a recursive function is executed by the JS Engine, the engine creates what are called "stack frames" or a "call stack", whereby each function call or execution is stored in a single stack. This allows the engine to keep track of the following:
   
@@ -46,6 +46,12 @@
   3. What are the returned values of the function,
   4. What are the newly created variables or updated variables, if any, and
   5. What other internal functions are in the function itself.
+  
+  There are four (4) key things to keep in mind when dealing with recursions:
+  a) Where the recursive function "pauses" when it is executed internally, after the first function call
+  b) The "casade" that is created every time the function runs - to the last function call and back to the first function call
+  c) Stack frames created per function call and cascade.
+  d) The cascade of "return values" that are "passed back" into the previous stack frames - eventually ending at the first function call.
 
 */
 
