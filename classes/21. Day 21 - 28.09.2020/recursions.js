@@ -122,3 +122,17 @@ let patterns = lines => {
 }
 
 console.log(patterns(5)); // Outputs the string of hash patterns in a pyramid scheme, similar to what the for loop did.
+
+// Print out an array with increasing numbers, starting from 1 and ending at the number (n) passed into the function
+function arrayInc(num) {
+  // Defin base case
+  if(num === 0) {
+    return [];
+  } else {
+    let newArray = arrayInc(num - 1);
+    newArray.push(num);
+    return newArray;
+  }
+} 
+
+console.log(arrayInc(3)); // Runs the recursive function arrayInc() 4 times and returns the newArray === [1, 2, 3]
