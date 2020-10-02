@@ -22,5 +22,11 @@
    The event queue is the second key component of the Event Loop Mechanism, and is responsible for, as the name suggests, "queueing" event listeners (stored in the event listeners container) as and when they are triggered. In precise terms, the event queue holds the "function" that is to be executed when a specified event goes off. In the event listener example above, this function is the "function_name" provided in the event listener code/syntax.
    
    All the triggered events are "scheduled" in the event queue, waiting to be run when the "stack" (call stack) is empty and cleared out.
+   
+   => The Stack (Call Stack / Stack Frame)
+   The JavaScript Stack keeps track of which functions are running, where they are running (what line of code in the program), and what values they are returning.
+   The stack is created every time a function call is made, in the case of event loops, every time an event is triggered and runs. The stack typically holds the function, its return value as well as any function-specific and/or global variables.
+   
+   Basic idea: A function call or execution creates a new stack, and when a function ends with a return value, the stack is destroyed.
 
 */
