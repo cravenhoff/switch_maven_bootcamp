@@ -62,7 +62,7 @@ for (let i = 5; i > 0; i--) {
 
 // Replace the above loop with a recursion instead
 let countdown = (counter) => {
-  // Declare base camp
+  // Declare base case
   if (counter === 0) {
     return "End of recursion...";
   } else {
@@ -89,7 +89,7 @@ console.log(evenOrOdd(12)); // Returns "Event"
 
 // Another Recursion Example: Counting Up to 100 in Fives
 let countToHundredInFives = num => {
-  // Define base camp
+  // Define base case
   if (num > 100) {
     return "Congratulations! You have reached 100.";
   } else {
@@ -111,7 +111,7 @@ for (let i = 0; i < 5; i++) {
 // Printing out a hash pyramid using a recursion
 let hash = "";
 let patterns = lines => {
-  // Define base camp
+  // Define base case
   if (lines === 0) {
     return lines;
   } else {
@@ -125,7 +125,7 @@ console.log(patterns(5)); // Outputs the string of hash patterns in a pyramid sc
 
 // Print out an array with increasing numbers, starting from 1 and ending at the number (n) passed into the function
 function arrayInc(num) {
-  // Defin base case
+  // Define base case
   if(num === 0) {
     return [];
   } else {
