@@ -35,6 +35,8 @@
     Recursions on the other hand are very elegant. Recursions emphasize and allow efficiency. However, a good rule of thumb when it comes to designing and build programs is to focus on writing code that is "correct" and "easy to understand". Efficiency, speed and app performance can be measured afterwards and improved if necessary.
   
   *NOTE: The important advantage recursion provides over loops, is that it can only be used to solve certain problems in a program that loops cannot otherwise do. More on this will be provided below in subsequent examples.
+  
+  => A key technical implementation of recursions over loops is the way these two constructs are handled by the JavaScript Engine. Recursions are essentially functions, but they are a special type of function. Unlike traditional functions, recursions or "recursive functions" call themselves in a sort of loop structure for a specified period of runs or iterations until a specific condition, called the "base case" is met and returns a value of true. It is this that tends to cause confusion with beginner programmers on why recursions should be used over loops.
 
 */
 
