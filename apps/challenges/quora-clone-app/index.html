@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quora Clone App - Week 5 Assessment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+    	.container {
+    		margin-top: 20px;
+    		margin-bottom: 20px;
+    	}
+    	#form {
+    		margin-top: 40px;
+    		margin-bottom: 40px;
+    	}
+    	textarea {
+    		min-height: 120px;
+    	}
+    	#user-container p {
+    		color: #777777;
+    	}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<h1>Quora Clone App</h1>
+		<p>An quora-like app forum where different professionals can submit their questions.</p><hr>
+
+		<div id="form">
+			<span class="text-danger" id="main-error"></span>
+
+			<!-- Input Field: Name -->
+			<div class="form-group" id="name-input">
+				<label for="name">Name:</label>
+				<input class="form-control" type="text" id="name" name="name" placeholder="Enter your name">
+				<small class="text-danger" id="name-error"></small>
+			</div>
+
+			<!-- Input Field: Occupation -->
+			<div class="form-group" id="occup-input">
+				<label for="occupation">Occupation:</label>
+				<input class="form-control" id="occupation" type="text" name="occupation" placeholder="Tell us your profession" >
+				<small class="text-danger" id="occup-error"></small>
+			</div>
+
+			<!-- Input Field: Question -->
+			<div class="form-group" id="question-input">
+				<label for="question">Question:</label>
+				<textarea class="form-control" id="question" placeholder="What would you like to ask?"></textarea>
+				<small class="text-danger" id="question-error"></small>
+			</div>
+
+			<!-- Submit and Reset Button -->
+			<button class="btn btn-danger">Submit</button>
+		</div><hr>
+
+		<h3>Display</h3>
+
+		<!-- User Container -->
+		<div id="user-container">
+			<!-- JavaScript Code -->
+		</div>
+		
+	</div>
+</body>
+
+<script>
+	let nameInput = document.querySelector("#name");
+	let occupationInput = document.querySelector("#occupation");
+	let questionInput = document.querySelector("#question");
+	let submitBtn = document.querySelector("button");
+
+	let userContainer = document.querySelector("#user-container");
+
+	let nameElement = document.createElement("strong");
+	let occupationElement = document.createElement("small");
+	let questionElement = document.createElement("p");
+
+	let users = [];
+
+	function User(name, occupation, question) {
+		this.name = name;
+		this.occupation = occupation;
+		this.question = question;
+	}
+
+	function setQuestion() {
+
+		if(nameInput.value === "" || occupationInput.value === "" || questionInput.value === "") {
+			document.querySelector("#main-error").innerText = "Input fields cannot be empty.";
+		} else {
+
+			let newUser = new User(nameInput.value, occupationInput.value, questionInput.value);
+			users.push(newUser);
+
+			let jsonData = JSON.stringify(users);
+			localStorage.setItem("quoraUser", jsonData);
+
+			getQuestion();
+		}
+		
+	}
+
+	function getQuestion() {
+
+		if(JSON.parse(localStorage.getItem("quoraUser"))) {
+
+			let retrievedData = JSON.parse(localStorage.getItem("quoraUser"));
+
+			for(let i = 0; i < retrievedData.length; i++) {
+				console.log(retrievedData);
+
+				let strongTag = document.createElement("strong");
+				strongTag.innerText = retrievedData[i]["name"] + " ";
+				document.querySelector("#user-container").appendChild(strongTag);
+
+				let smallTag = document.createElement("small");
+				smallTag.innerText = retrievedData[i]["occupation"];
+				document.querySelector("#user-container").appendChild(smallTag);
+
+				let pTag = document.createElement("p");
+				pTag.innerText = retrievedData[i]["question"];
+				document.querySelector("#user-container").appendChild(pTag);
+			}
+		}
+	}
+
+	submitBtn.addEventListener("click", setQuestion);
+	window.addEventListener("load", getQuestion);
+</script>
+</html>
