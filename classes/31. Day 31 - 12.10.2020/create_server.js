@@ -16,3 +16,8 @@ const server = http.createServer(function(res, req) {
   res.setHeader = ("Content-Type", "text/html");
   
 })
+
+// Send server request
+server.listen(hostName, port, function() {
+  console.log(`Server running at http://${hostName}:${port}/`);
+})
