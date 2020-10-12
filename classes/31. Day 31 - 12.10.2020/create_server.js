@@ -23,7 +23,11 @@ const server = http.createServer(function(res, req) {
   } else if (res.url === "/dog") {
     res.end(
       `<h1>Dog Route</h1><a href="/cat">Cat</a>`
-    )
+    );
+  } else {
+    res.end(
+      `<h1>Any Other Route</h1><a href="/dog">Dog</a><a href="/cat">Cat</a>`
+    );
   }
   
 })
